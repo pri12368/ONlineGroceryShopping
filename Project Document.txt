@@ -1,0 +1,290 @@
+Online Application Title:Online Grocery Shopping
+Team members:Priyanka Thube
+             Santoshi Pawar
+
+	Application Architecture:
+
+	Physical Computing:
+
+	Virtual Computing: in house virtualization
+		Virtualization:
+		
+			 virtual machines are created with webserver , database server installation
+			 on same physical infrastructure
+		 Virtualization:
+				VMware, Oracle Virtual box
+				HyperV
+
+	Cloud Computing:
+			Public Cloud:
+				
+				Amazon Web services ( AWS)
+					 will be able to support hosting your servers, services, applications
+					 on Amazon datacenters
+
+
+	Hands-On
+
+	Introduction Jira (SAAS) for following Agile Methodology
+	Scrum
+	Github----Code repository
+
+	Application Architecture
+	
+
+Online Application Title:Online Grocery Shopping
+
+Team members:Priyanka Thube
+             Santoshi Pawar
+
+SRS Document:
+
+
+ER Listing:
+    Business Entity:
+
+				
+                               Delivery person:				
+					ID
+					First Name
+					Last  Name
+					email
+					contact Number
+
+				Vendor:
+					 ID
+					 Title
+					 email
+					 contact Number
+		
+				Customer				 
+						ID
+				                FirstName
+                                                LastName
+						email
+						contact number
+						address
+						
+				Product
+						ID,
+						Title
+						Description
+						Category
+						price
+						Quantity
+						image
+						
+				Order
+                                          Id
+                                          Customer
+					  Product
+                                          Delivery_Person_Id
+					  Total Amount
+
+				payment:
+					ID
+					payment Date
+					Order
+ 					Payment_method
+
+				
+				
+				Login_details
+					UserID  
+					LoginName
+					Password 
+
+                               Delivery_Person
+                                     Id
+				     Name
+                                     Address
+				   
+
+
+
+Application Architecture:
+
+	Application = 
+			Logic 	+  data
+
+	Logic =(UI Logic  + Business Logic + DataAccess Logic) 
+	Data  =( structured data , Non Structured data)
+
+
+	Desktop application Architecture and Online Application Architecture
+
+
+Online Application:
+
+	    Web based Application
+		    deployed on web and accessed by users from anywhere
+
+		    ShoppingApplication------Web portal-- used remotely by endusers,
+							                   vendors,
+								           employees
+Logic:
+     UI Logic:
+
+		 Web Pages +  HTML controls + Web Components (Angular)
+		 Navigation : (UI Routing) HTML Links, Routing mechansim
+		 Data Binding : DOM  + JSP tags (JSTL) + {{}} ngModel,
+		 
+		 Event Binding : 				action handlers
+					
+				 
+			HTTP Request:	GET:----------------Doget
+					POST:---------------Dopost
+					PUT:
+					DELETE:
+
+              Client Side UI----------------HTML, CSS, javaScript, bootstrap
+					        UI (Client Side UI Framework)
+						Angular, React, Vue,..........
+
+	Web Logic: ( Server Side processing)
+
+		Server UI---------------- JSP, servelet,  ( classical java web technology)
+				 spring MVC  ( to take advantage of MVC design Pattern using ready made frmwrk)
+						 Model, View, Controller
+						 Router
+						 (SOA  layer)
+						Spring Boot api
+						CRUD REST API
+						ORM Technique:Hibernate  ( ORM)
+						       ,JPA
+				         	JDBC  ( database Connectivity)
+		State management
+				
+		 	Client Side state management
+				cookies, querystring, form collection, hidden variables
+				 local storage, session storage, Web sql, 
+
+			Server Side state management
+				session, Cache,
+				database
+	Business Logic:
+		
+	
+		Java console application will be used to test your business Logic
+
+		Core Java:
+
+		will contain
+		 1.business query processing
+		 2.business operation managment
+		 3.Business data manipulation
+		
+	   from online grocery shopping point of view
+                Modules:
+                1.Registarion
+                     New customer have to register.
+                     If already register then login directly
+                     using username and password
+                                          
+
+		2.Grocery Catalog
+				: Grocery Inventory
+					create, insert, delete,
+				: Grocery Category 
+					 get all
+					 get by category
+					
+		 3.Shopping Cart:	
+				Adding to cart
+				Removing from cart
+				getting all element from cart
+				 ,,,etc.
+	
+		
+                4.Order Processing:
+                     update order
+                     create order
+                     cancel order
+                     get order history
+                     get current order details
+                     Order shipped status
+                     Order delivered status
+
+                
+                5.Payment Processing:
+                    Payment details
+		    Payment type
+		    Confirm Payment
+		    Show payment successful
+
+
+Data :
+		 Structured Data
+			 RDBMS
+				fields
+				tables
+				contstraints
+
+				Add some dummy records in your newly created database
+
+				write  reusable SQL queries against those database tables to check bussiness Queries
+				Test those SQL queries on existing dummy database you built
+
+                         List Of tables:
+                                Login_Details
+                                  Fields:
+                                   Username,Password,status
+     
+                                Vendor:
+                                    Fields:
+                                      Id,FirstName,LastName,email,contactNo
+                                    Primary key:
+                                       Vendor_Id
+
+                                Customers
+                                    Fields:
+                                       Id,FirstName,LastName,email,contactNo
+                                     Primary key:
+                                        Customer_Id
+
+                                Products
+                                     Fields:
+                                       ProductId,ProductName,Price,Quantity,description,image
+                                     Primary key:
+                                        ProductId
+
+                                Orders
+                                  Fields:
+                                       Order_Id,Customer_ID,Total_bill_Amount,Date,Delivery_Person_ID
+                                     Primary key:
+                                        Order_Id
+                                     Foreign key:
+                                        Customer_ID
+                                        Delivery_Person_ID
+                               
+                                OrderDetails
+                                     Fields:
+                                       Produc_Id,Order_Id
+                                     Foreign key
+                                        ProductId
+                                        Order_ID
+ 
+                                Payment
+                                    Fields:
+                                      Payment_Id,Payment_date,order_idpayment_mode
+                                    Primary key:
+                                      Payment_Id
+                                    Foreign key:
+                                      Order_Id
+
+                              
+                               Dellivery Person
+                                  Fields:
+                                    Delivery_Person_Id,Name,Adress,Contact_No
+                                  Primary key:
+                                    Delivery_Person_Id
+
+_______________________________________________________________________________________________
+
+
+
+
+
+
+
+	
